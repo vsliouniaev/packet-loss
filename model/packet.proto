@@ -1,0 +1,10 @@
+//protoc --proto_path=model --go_out=model --go_opt=paths=source_relative model/packet.proto
+syntax = "proto3";
+package packetloss;
+option go_package = "github.com/vsliouniaev/packet-loss/model";
+import "google/protobuf/timestamp.proto";
+message Packet {
+  uint64 number = 1;
+  google.protobuf.Timestamp timestamp = 2;
+}
+
